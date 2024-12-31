@@ -13,7 +13,7 @@ const MainPage = () => {
   
 // function
    const addItem = () =>{
-    const obj:any = todos.find(item => item.id === id)
+    let obj:any = todos.find(item => item.id === id)
 
     if(obj){
       let newArray = todos.filter(item => item.id !== obj.id)
@@ -29,7 +29,7 @@ const MainPage = () => {
    }
 
    const editItem = (id:any) =>{
-    const obj:any = todos.find(item => item.id === id)
+    let obj:any = todos.find(item => item.id === id)
     setInput(obj.task)
     setId(obj.id)
 
